@@ -28,6 +28,7 @@ Create a HTML file to implement form based input and output.
 Publish the website in the given URL.
 
 ## PROGRAM :
+```
 ## math.html:
 
 <html>
@@ -107,9 +108,9 @@ Publish the website in the given URL.
 </body>
 
 </html>
-
+```
 ## views.py:
-
+```
 
 from django.shortcuts import render
 
@@ -131,10 +132,10 @@ def prismarea(request):
         context['h'] = h
         print('Area=',area)
     return render(request,'jaiapp/math.html',context)
-
+```
 ## urls.py:
+```
 
-"""
 URL configuration for jai project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -159,7 +160,7 @@ urlpatterns = [
     path('areaofrectangle/',views.prismarea,name="areaofrectangle"),
     path('',views.prismarea,name="areaofrectangleroot")
 ]
-
+```
 ## OUTPUT:
 ![Screenshot (15)](https://github.com/sanjay3061/MathServer/assets/121215929/6391f842-75cc-41eb-b4a9-2e22468cf9ad)
 
